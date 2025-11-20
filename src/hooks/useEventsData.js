@@ -4,6 +4,7 @@ const URL='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=MX&
 const useEventsData=(params)=>{
     const [error, setError] = useState();
     const [data, setData] = useState()
+
         const fetchEvents=async ()=>{
             try{
                 const response  = await fetch(`${URL} ${params?.lenght ? params : ''}`)
@@ -16,7 +17,7 @@ const useEventsData=(params)=>{
         };
 
     return {
-        events:data?._embedded.events || [],
+        events:data?._embedded?.events || [],
         error,
         fetchEvents,
     }

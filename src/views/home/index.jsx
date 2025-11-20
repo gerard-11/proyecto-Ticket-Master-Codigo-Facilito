@@ -5,7 +5,7 @@ import useEventsData from '../../hooks/useEventsData'
 /*import {useNavigate} from "react-router-dom";*/
 
 const Home= ()=>{
-    const {events, fetchEvents} = useEventsData()
+    const {events,error, fetchEvents} = useEventsData()
     const [searchTerm, setSearchTerm] = useState('');
 
 

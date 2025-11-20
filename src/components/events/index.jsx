@@ -5,6 +5,7 @@ import {useNavigate} from 'react-router-dom'
 const Events= ({searchTerm,events})=>{
 
     const navigate = useNavigate();
+
     const handleEventItemClick = (id) => {
        navigate(`/detail/${id}`)
     }
