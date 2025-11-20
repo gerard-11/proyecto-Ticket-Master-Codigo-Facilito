@@ -1,0 +1,30 @@
+.pagination{
+        list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page{
+    font-size: 20px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.previous, .next{
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    margin:0 5px 0 5px;
+}
+.previous:hover, .next:hover, .page:hover{
+    color: #4d6bc9;
+}
+.active{
+    color: #f7f7f8;
+    background-color: #111717;
+    border-radius: 20px;
+}
+.disabledPage{
+    cursor: not-allowed;
+}

@@ -1,13 +1,13 @@
 import {useState} from "react";
 const URL='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=MX&apikey=wwFFUkurLysDN6X6K9DpGfLSa10DfNd5'
 
-const useEventsData=(params)=>{
+const useEventsData=()=>{
     const [error, setError] = useState();
-    const [data, setData] = useState()
+    const [data, setData] = useState([])
 
-        const fetchEvents=async ()=>{
+        const fetchEvents=async (params)=>{
             try{
-                const response  = await fetch(`${URL} ${params?.lenght ? params : ''}`)
+                const response  = await fetch(`${URL}${params?.length?params:''}`)
                 const data= await response.json()
                 setData(data)
                 console.log(data)
@@ -18,6 +18,7 @@ const useEventsData=(params)=>{
 
     return {
         events:data?._embedded?.events || [],
+        page:data?.page || {},
         error,
         fetchEvents,
     }
