@@ -1,0 +1,37 @@
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from 'react-router-dom'
+
+import Home from '../views/home'
+import Detail from '../views/detail'
+import Error404 from '../views/error'
+import Profile from '../views/profile'
+
+const router=createBrowserRouter([
+    {
+        path:'/',
+        element:<Home/>,
+        errorElement:<Error404/>
+    },
+    {
+        path:'/detail/:eventId',
+        element:<Detail/>,
+    },
+    {
+        path:'/profile',
+        element:<Profile/>,
+        children: [{
+            path:'my-info',
+            element: <div>My info</div>
+        }
+        ,{
+            path:'liked-events',
+                element:<div>Liked events</div>,
+            }
+            ]
+    }
+])
+const MyRoutes = () => <RouterProvider router={router}/>
+
+export default MyRoutes;

@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    /*width:100%;*/
+    height: auto;
+
+    margin-bottom: 20px;
+    padding:30px;
+    justify-content: center;
+}
+img{
+    border-radius: 12px;
+    margin:auto;
+}
+button{
+    justify-content: center;
+    width: 100px;
+    height: 45px;
+}

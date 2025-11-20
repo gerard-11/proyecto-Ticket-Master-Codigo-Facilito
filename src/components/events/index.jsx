@@ -1,11 +1,13 @@
 import EventItem from './eventsItem/eventItem.jsx'
-import data from '../../data/events.json'
-console.log(data)
-const events = data._embedded.events
-const handleEventItemClick = (id) => {
-console.log('evento de click:', id)
-}
-const Events= ({searchTerm})=>{
+
+import {useNavigate} from 'react-router-dom'
+
+const Events= ({searchTerm,events})=>{
+
+    const navigate = useNavigate();
+    const handleEventItemClick = (id) => {
+       navigate(`/detail/${id}`)
+    }
 
     const renderEvents = ()=>{
         let eventFiltered= events;
@@ -16,15 +18,13 @@ const Events= ({searchTerm})=>{
             <EventItem
                 key={`event-item: ${eventItem.id}`}
                 name={eventItem.name}
-                image={eventItem.images[2].url}
+                image={eventItem.images[0].url}
                 info={eventItem.info}
                 onEventClick={handleEventItemClick}
                 id={eventItem.id}
-
             />
         ))
     }
-
     return (
         <div>
       eventos
