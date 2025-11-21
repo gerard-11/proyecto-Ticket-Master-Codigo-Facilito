@@ -1,0 +1,21 @@
+h4{
+    color: #f7f7f8;
+    font-size:25px;
+}
+.Date{
+    font-weight: 700;
+    font-size:20px;
+}
+.imgDetail{
+    height: 70vh;
+    width: 150vh;
+}
+.containerNotesEvent{
+    background-color: #4d6bc9;
+}
+.seatMap{
+    background-color: #185fcc;
+}
+.containerNotesEvent p{
+    font-size:20px;
+}

@@ -6,8 +6,8 @@ const Error404=()=>{
     console.log(error)
     return(
         <div className={styles.container}>
-            <h3 className={styles.title}>{error.status} Ops!</h3>
-            <p className={styles.description}>{error.data }</p>
+            <h3 className={styles.title}>{error?.status} Ops!</h3>
+            <p className={styles.description}>{error.data}</p>
         </div>
     )
 }
