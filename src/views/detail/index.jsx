@@ -59,7 +59,7 @@ const Detail= ()=> {
                         <p>{eventData?.pleaseNote}</p>
                     </div>
                 </div>
-                <a href={newUrlTickets(eventData.url)} target='_blank'>ir por tus boletos</a>
+                {/*<a href={()} target='_blank'>ir por tus boletos</a>*/}
             </div>
             {error&& <Error404/>}
         </>

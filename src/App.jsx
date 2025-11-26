@@ -1,7 +1,5 @@
 import Events from "./components/events/index.jsx";
 import './App.css'
-
-
 import MyRoutes from "./routes/index.jsx";
 
 

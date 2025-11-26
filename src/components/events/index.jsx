@@ -1,5 +1,4 @@
 import EventItem from './eventsItem/eventItem.jsx'
-
 import {useNavigate} from 'react-router-dom'
 
 const Events= ({searchTerm,events})=>{

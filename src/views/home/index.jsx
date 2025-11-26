@@ -25,11 +25,11 @@ const Home= ()=>{
         fetchEvents(`&keyword=${searchTerm}&page=${selected}`)
     }
 
-
     const renderEvents=()=>{
         if(error){
            return  <div>Hubo un error</div>
         }
+
         return(
             <div>
                 <Events searchTerm={searchTerm} events={events}/>
@@ -44,7 +44,7 @@ const Home= ()=>{
                     nextLabel="next >"
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={5}
-                    pageCount={page.totalPages}
+                    pageCount={Math.ceil(page.totalPages)}
                     previousLabel="<"
                     renderOnZeroPageCount={null}/>
             </div>

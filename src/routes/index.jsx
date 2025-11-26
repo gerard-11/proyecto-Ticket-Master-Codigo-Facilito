@@ -1,8 +1,4 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from 'react-router-dom'
-
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Home from '../views/home'
 import Detail from '../views/detail'
 import Error404 from '../views/error'
