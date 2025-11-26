@@ -2,7 +2,6 @@ import {create} from 'zustand'
 
 //Store para guardar valores globales
 const URL='https://app.ticketmaster.com/discovery/v2/events.json?countryCode=MX&apikey='
-
 const useEventsResults= create((set)=>({
     data:[],
     error:null,
