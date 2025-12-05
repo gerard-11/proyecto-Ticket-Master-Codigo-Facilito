@@ -4,6 +4,7 @@ import Error404 from "../error/index.jsx";
 import style from './detail.module.css'
 import {format} from 'date-fns'
 import {es} from 'date-fns/locale'
+import BackHome from "../../components/BackHome/BackHome.jsx";
 
 const Detail= ()=> {
     const {eventId} = useParams();
@@ -11,11 +12,12 @@ const Detail= ()=> {
     const [error, setError] = useState();
     const[isLoading,setIsLoading] = useState(true);
     console.log(eventId);
+    const apiKey = import.meta.env.VITE_TICKETMASTER_APIKEY;
 
     useEffect(() => {
         const fetchEventData=async()=>{
             try{
-                const response=await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}.json?apikey=wwFFUkurLysDN6X6K9DpGfLSa10DfNd5`)
+                const response=await fetch(`https://app.ticketmaster.com/discovery/v2/events/${eventId}.json?apikey=${apiKey}`)
                 const data=await response.json();
                 setEventData(data)
                 setIsLoading(false);
@@ -43,7 +45,8 @@ const Detail= ()=> {
         }
     }*/
     return(
-        <>
+        <div >
+            <BackHome className={style.homeButton}/>
             <div className={style.container}>
                 <div className={style.mainInfoContainer}>
                     <img className={style.imgDetail} src={eventData?.images?.[0]?.url} alt=''/>
@@ -62,7 +65,7 @@ const Detail= ()=> {
                 {/*<a href={()} target='_blank'>ir por tus boletos</a>*/}
             </div>
             {error&& <Error404/>}
-        </>
+        </div>
 
     )
 }

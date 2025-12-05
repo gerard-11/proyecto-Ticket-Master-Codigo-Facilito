@@ -1,0 +1,23 @@
+.active{
+    border-bottom: #185fcc solid 1px;
+}
+.tab{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    cursor:pointer;
+}
+.tab:hover{
+    opacity: 0.7;
+}
+
+.tabContainer{
+    margin:12px 0;
+}
+.buttonHome{
+    background-color: #185fcc;
+    width:80px;
+    padding:5px;
+    border:none;
+    border-radius:10px;
+}

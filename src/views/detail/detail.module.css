@@ -7,15 +7,31 @@ h4{
     font-size:20px;
 }
 .imgDetail{
-    height: 70vh;
-    width: 150vh;
+    height: 50vh;
+    width: 120vh;
 }
 .containerNotesEvent{
     background-color: #4d6bc9;
 }
 .seatMap{
-    background-color: #185fcc;
+    background-color: #345a93;
 }
 .containerNotesEvent p{
     font-size:20px;
+}
+.homeButton{
+    background-color: #185fcc;
+    width:80px;
+    height:40px;
+    border-radius: 8px;
+    margin:10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media(max-width:480px){
+    .imgDetail{
+        height: 200px;
+        width: 300px;
+    }
 }

@@ -1,6 +1,6 @@
 import EventItem from './eventsItem/eventItem.jsx'
 import {useNavigate} from 'react-router-dom'
-
+import style from './events.module.css'
 const Events= ({searchTerm,events})=>{
     const navigate = useNavigate();
 
@@ -25,10 +25,14 @@ const Events= ({searchTerm,events})=>{
         ))
     }
     return (
-        <div>
-      eventos
-            {renderEvents()}
-        </div>
+        <>
+            <h1>  eventos</h1>
+            <div className={style.contendorDeItems}>
+
+                {renderEvents()}
+            </div>
+        </>
+
     )
 }
 export default Events

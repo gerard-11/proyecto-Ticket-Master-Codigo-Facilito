@@ -1,33 +1,81 @@
-.container{
-    display:flex;
-   margin :24px 0;
-    align-items:center;
-
-}
-.infoContainer{
-    display:flex;
+.eventItemContainer{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
     flex-direction: column;
-    margin-left: 25px;
-    align-items: start;
-
-
+    width:20%;
+    border:1px solid blue;
+    padding: 10px;
+    margin: 5px;
+    border-radius:0 0 10px 10px;
+    justify-content: center;
 }
 
-.eventTitle{
-    font-size:24px;
+
+/*.container {
+    display: flex;
+    margin: 24px 0;
+    align-items: center;
+
+}*/
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    align-items: center;
+}
+
+.eventTitle {
+    font-size: 15px;
     justify-content: center;
     text-align: center;
-    margin-top:20px;
-
+    margin-top: 20px;
+    color: blue;
 }
-.eventInfo{
+
+.eventInfo {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
-img{
-    height:240px;
+.heartImage{
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    z-index:1;
+    left:5px;
+    top:5px;
+}
+.imageContainer{
+    position: relative;
+}
+.buttonCard{
+    background-color: #185fcc;
+    padding: 8px;
+    width: 150px;
+    border-radius: 10px;
+}
+.imgMain {
+    height: 200px;
+    border:1px solid blue;
     border-radius: 12px;
+    box-shadow: #4d6bc9 1px 1px 20px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .infoContainer {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
 }
