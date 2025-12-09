@@ -26,7 +26,7 @@ const Events= ({searchTerm,events})=>{
     }
     return (
         <>
-            <h1>  eventos</h1>
+            <h1 style={{color:'black'}}> Eventos</h1>
             <div className={style.contendorDeItems}>
 
                 {renderEvents()}

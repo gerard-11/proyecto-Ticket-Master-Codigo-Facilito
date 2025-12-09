@@ -1,18 +1,20 @@
-import {useEffect, useState} from "react";
+import {useEffect, useState, useCallback, useRef} from "react";
 import NavBar from "../../components/NavBar/index.jsx";
 import Events from "../../components/events/index.jsx";
 import useEventsData from '../../hooks/useEventsData'
 import ReactPaginate from 'react-paginate';
 import styles from  './home.module.css'
+import BackHome from "../../components/BackHome/BackHome.jsx";
 /*import {useNavigate} from "react-router-dom";*/
 
 const Home= ()=>{
     const {events,error, fetchEvents,page} = useEventsData()
     const [searchTerm, setSearchTerm] = useState('');
+let fetchMyEventsRef=useRef()
 
-
+    fetchMyEventsRef.current=fetchEvents;
     useEffect(()=>{
-        fetchEvents()
+        fetchMyEventsRef.current()
     },[])
 
     const handleNavBarSearch=(term)=>{
@@ -20,10 +22,10 @@ const Home= ()=>{
         fetchEvents(`&keyword=${term}`)
     }
 
-    const handlePageClick = ({selected})=>{
-            console.log(selected)
+    const handlePageClick = useCallback(({selected})=>{
+            console.log('selected',selected)
         fetchEvents(`&keyword=${searchTerm}&page=${selected}`)
-    }
+    },[searchTerm,fetchEvents])
 
     const renderEvents=()=>{
         if(error){

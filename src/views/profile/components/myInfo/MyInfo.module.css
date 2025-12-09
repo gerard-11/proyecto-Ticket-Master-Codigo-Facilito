@@ -1,9 +1,24 @@
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding:10px ;
 }
-
+input{
+    padding: 7px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #444;
+    margin-top:10px;
+    font-size: 16px;
+}
 label{
     font-size: 15px;
     display: flex;
@@ -14,7 +29,9 @@ label{
 }
 
 .submitButton{
-    width: 292px;
+    width:300px;
     margin-top: 10px;
-    padding: 4px;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #111717;
 }

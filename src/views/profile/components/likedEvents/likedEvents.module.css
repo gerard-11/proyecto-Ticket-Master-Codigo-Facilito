@@ -1,0 +1,13 @@
+.mainContainer{
+    width: 105vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:30px;
+}
+.likedEventContainer{
+    color:blue;
+ height: auto;
+}
+.likedEventContainer p{
+    color: blue;
+}

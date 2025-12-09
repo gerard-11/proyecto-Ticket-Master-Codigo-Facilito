@@ -2,7 +2,7 @@ import {LIKED_EVENTS_STORAGE_KEY} from '../../../../utils/constants.js'
 import {useEffect, useState} from "react";
 import {useNavigate} from 'react-router-dom'
 import EventItem from "../../../../components/events/eventsItem/eventItem.jsx";
-
+import style from'./likedEvents.module.css'
 const apiKey = import.meta.env.VITE_TICKETMASTER_APIKEY;
 
 const LikedEvents=()=>{
@@ -40,7 +40,7 @@ const LikedEvents=()=>{
         return <div>Error</div>
     }
     return (
-        <div>
+        <div className={style.mainContainer}>
             {events.map((event,index)=>
 <EventItem
     key={`liked-event-item: ${event.id}-${index}`}
@@ -49,9 +49,8 @@ const LikedEvents=()=>{
     info={event.info}
     onEventClick={handleEventItemClick}
     id={event.id}
-
-/>
-            )}
+    className={style.likedEventContainer}
+/>)}
         </div>
     )
 }

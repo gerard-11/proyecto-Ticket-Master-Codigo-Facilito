@@ -15,9 +15,10 @@
     margin:12px 0;
 }
 .buttonHome{
-    background-color: #185fcc;
-    width:80px;
-    padding:5px;
+    background-color: #111717;
+    width:100px;
+    padding:8px;
     border:none;
     border-radius:10px;
+    font-size:16px;
 }
